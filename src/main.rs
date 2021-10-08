@@ -8,7 +8,7 @@ use web3::types::{BlockNumber, FilterBuilder, SyncState};
 async fn main() {
     // Start future log stream before requesting current block number, to ensure BlockNumber::Pending isn't after current_block
 
-    let node_endpoint = "wss://rinkeby.infura.io/ws/v3/8225b8de4cc94062959f38e0781586d1";
+    let node_endpoint = "<add a real infura endpoint>";
     let web3 = tokio::time::timeout(Duration::from_secs(5), async {
         Ok(web3::Web3::new(
             web3::transports::WebSocket::new(node_endpoint).await?,
